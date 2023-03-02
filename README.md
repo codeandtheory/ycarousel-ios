@@ -1,5 +1,9 @@
-# Y—Carousel
+![Y—Carousel](https://user-images.githubusercontent.com/1037520/222451350-a6c6b658-5762-448a-9cc3-d9ec2f464ef4.jpeg)
 _An easy-to-use carousel that comes in both view and view controller flavors._
+
+This framework lets you populate a carousel with an array of views. Pages can occupy the full width of the carousel or be inset slightly to show part of the adjacent pages. The carousel can be navigated by panning, swiping, or tapping on the page control.
+
+![Carousel demo animation](https://user-images.githubusercontent.com/1037520/222453522-5c5242e5-6c0c-4d3f-990e-cab64891dafc.gif)
 
 Licensing
 ----------
