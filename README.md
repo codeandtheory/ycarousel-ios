@@ -1,4 +1,5 @@
 ![Y—Carousel](https://user-images.githubusercontent.com/1037520/222451350-a6c6b658-5762-448a-9cc3-d9ec2f464ef4.jpeg)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyml-org%2Fycarousel-ios%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/yml-org/ycarousel-ios) [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyml-org%2Fycarousel-ios%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/yml-org/ycarousel-ios)  
 _An easy-to-use carousel that comes in both view and view controller flavors._
 
 This framework lets you populate a carousel with an array of views. Pages can occupy the full width of the carousel or be inset slightly to show part of the adjacent pages. The carousel can be navigated by panning, swiping, or tapping on the page control.
