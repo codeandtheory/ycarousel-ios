@@ -109,6 +109,11 @@ let carouselViewController = CarouselViewController(viewControllers: childVCs)
 present(carouselViewController, animated: true, completion: nil)
 ```
 
+Dependencies
+----------
+
+Y—Carousel depends upon our [Y—CoreUI](https://github.com/yml-org/ycoreui) framework (also open source and Apache 2.0 licensed).
+
 Installation
 ----------
 
