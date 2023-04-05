@@ -12,8 +12,8 @@ import UIKit
 public class CarouselViewController: UIViewController, CarouselViewDelegate, CarouselViewDataSource {
     private let pages: [CarouselPage]
 
-    /// Disables key commands. Default is `false`.
-    public var disableKeyCommand: Bool = false
+    /// Enables keyboard navigation. Default is `true`.
+    public var isKeyboardNavigationEnabled: Bool = true
 
     /// The carousel view managed by this controller
     public var carouselView: CarouselView! { view as? CarouselView }
@@ -120,16 +120,12 @@ internal extension CarouselViewController {
     }
 
     @objc func leftArrowKeyPressed() {
-        if disableKeyCommand {
-            return
-        }
+        guard isKeyboardNavigationEnabled else { return }
         self.carouselView.loadView(at: carouselView.currentPage - 1)
     }
 
     @objc func rightArrowKeyPressed() {
-        if disableKeyCommand {
-            return
-        }
+        guard isKeyboardNavigationEnabled else { return }
         self.carouselView.loadView(at: carouselView.currentPage + 1)
     }
 }
