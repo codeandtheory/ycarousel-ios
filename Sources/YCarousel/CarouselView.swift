@@ -118,6 +118,16 @@ public class CarouselView: UIView {
         }
         return nil
     }
+
+    /// Load view at index
+    /// - Parameter index: index of view
+    public func loadView(at index: Int) {
+        guard 0..<numberOfPages ~= index else {
+            return
+        }
+        currentPage = index
+        gotoPage(at: index)
+    }
 }
 
 internal extension CarouselView {

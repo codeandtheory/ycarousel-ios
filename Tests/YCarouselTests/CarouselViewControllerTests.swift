@@ -82,6 +82,86 @@ final class CarouselViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.pageWillUnload)
         XCTAssertTrue(sut.pageWillUnload)
     }
+
+    func test_keycommand() {
+        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.pages.count, 2)
+
+        // left key pressed more than once, at index 0
+        sut.leftArrowKeyPressed()
+        sut.leftArrowKeyPressed()
+        sut.leftArrowKeyPressed()
+
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // right key pressed more than number of pages, at index 0
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, sut.carouselView.pages.count-1)
+    }
+
+    func test_keycommand_disable() {
+        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.pages.count, 2)
+
+        // before disable
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+
+        sut.disableKeyCommand = true
+        // after disable, no change in current page
+        sut.leftArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        sut.rightArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+    }
+
+    func test_keycommand_with_vc() {
+        let sut = makeSUT(withViewControllers: [
+            UIViewController(),
+            UIViewController(),
+            UIViewController()
+        ])
+        XCTAssertEqual(sut.carouselView.pages.count, 2)
+
+        // left key pressed more than once, at index 0
+        sut.leftArrowKeyPressed()
+        sut.leftArrowKeyPressed()
+        sut.leftArrowKeyPressed()
+
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // right key pressed more than number of pages, at index 0
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, sut.carouselView.pages.count-1)
+    }
+
+    func test_keycommand_disable_with_vc() {
+        let sut = makeSUT(withViewControllers: [
+            UIViewController(),
+            UIViewController(),
+            UIViewController()
+        ])
+        XCTAssertEqual(sut.carouselView.pages.count, 2)
+
+        // before disable
+        sut.rightArrowKeyPressed()
+        sut.rightArrowKeyPressed()
+
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+
+        sut.disableKeyCommand = true
+        // after disable, no change in current page
+        sut.leftArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        sut.rightArrowKeyPressed()
+        XCTAssertEqual(sut.carouselView.currentPage, 2)
+    }
 }
 
 private extension CarouselViewControllerTests {

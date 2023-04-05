@@ -12,6 +12,9 @@ import UIKit
 public class CarouselViewController: UIViewController, CarouselViewDelegate, CarouselViewDataSource {
     private let pages: [CarouselPage]
 
+    /// Disables key commands. Default is `false`.
+    public var disableKeyCommand: Bool = false
+
     /// The carousel view managed by this controller
     public var carouselView: CarouselView! { view as? CarouselView }
 
@@ -37,6 +40,7 @@ public class CarouselViewController: UIViewController, CarouselViewDelegate, Car
         carouselView.dataSource = self
         carouselView.delegate = self
         self.view = carouselView
+        setKeys()
     }
 
     // MARK: - CarouselViewDelegate
@@ -94,4 +98,38 @@ public class CarouselViewController: UIViewController, CarouselViewDelegate, Car
     /// - Parameter index: Indicates the index of a page.
     /// - Returns: UIView
     public func carouselView(pageAt index: Int) -> UIView { pages[index].view }
+}
+
+// MARK: - UIKeyCommand
+
+internal extension CarouselViewController {
+    func setKeys() {
+        let rightArrow = UIKeyCommand(
+            title: CarouselViewController.Strings.next.localized,
+            action: #selector(rightArrowKeyPressed),
+            input: UIKeyCommand.inputRightArrow
+        )
+        let leftArrow = UIKeyCommand(
+            title: CarouselViewController.Strings.previous.localized,
+            action: #selector(leftArrowKeyPressed),
+            input: UIKeyCommand.inputLeftArrow
+        )
+        
+        addKeyCommand(leftArrow)
+        addKeyCommand(rightArrow)
+    }
+
+    @objc func leftArrowKeyPressed() {
+        if disableKeyCommand {
+            return
+        }
+        self.carouselView.loadView(at: carouselView.currentPage - 1)
+    }
+
+    @objc func rightArrowKeyPressed() {
+        if disableKeyCommand {
+            return
+        }
+        self.carouselView.loadView(at: carouselView.currentPage + 1)
+    }
 }
