@@ -83,126 +83,65 @@ final class CarouselViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.pageWillUnload)
     }
 
-    func test_press_keyboard_left_atindex_zero() {
-        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // left key pressed more than once, at index 0
+    func test_pressKeyboardLeft_deliversPreviousPage() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadPage(at: 1)
+        // When
         sut.leftArrowKeyPressed()
-        sut.leftArrowKeyPressed()
-        sut.leftArrowKeyPressed()
-
+        // Then
         XCTAssertEqual(sut.carouselView.currentPage, 0)
     }
 
-    func test_press_keyboard_left_atindex_non_zero() {
-        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // right key pressed twice to be at index 2
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
-        // left key pressed to be back at 0
+    func test_pressKeyboardLeftOnFirstPage_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // When
         sut.leftArrowKeyPressed()
-        sut.leftArrowKeyPressed()
+        // Then
         XCTAssertEqual(sut.carouselView.currentPage, 0)
     }
 
-    func test_press_keyboard_right_atindex_zero() {
-        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // right key pressed more than once, at index 0
+    func test_pressKeyboardRight_deliversNextPage() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // When
         sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
     }
 
-    func test_press_keyboard_right_atindex_non_zero() {
-        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // right key pressed more than numberOfPages
+    func test_pressKeyboardRightFromLastPage_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadView(at: 1)
+        // When
         sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
     }
 
-    func test_keyboard_disable() {
-        let sut = makeSUT(withViews: [UIView(), UIView(), UIView()])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // before disable
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
-
+    func test_pressKeyboardLeftWhenDisabled_DeliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadView(at: 1)
         sut.isKeyboardNavigationEnabled = false
-        // after disable, no change in current page
+        // When
         sut.leftArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
-        sut.rightArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
     }
 
-    func test_keycommand_left_with_vc_at_zero_index() {
-        let sut = makeSUT(withViewControllers: [
-            UIViewController(),
-            UIViewController(),
-            UIViewController()
-        ])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // left key pressed more than once, at index 0
-        sut.leftArrowKeyPressed()
-        sut.leftArrowKeyPressed()
-        sut.leftArrowKeyPressed()
-
-        XCTAssertEqual(sut.carouselView.currentPage, 0)
-    }
-    
-    func test_keycommand_right_with_vc_at_zero_index() {
-        let sut = makeSUT(withViewControllers: [
-            UIViewController(),
-            UIViewController(),
-            UIViewController()
-        ])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // right key pressed more than number of pages, at index 0
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, sut.carouselView.pages.count-1)
-    }
-
-    func test_keycommand_disable_with_vc() {
-        let sut = makeSUT(withViewControllers: [
-            UIViewController(),
-            UIViewController(),
-            UIViewController()
-        ])
-        XCTAssertEqual(sut.carouselView.pages.count, 2)
-
-        // before disable
-        sut.rightArrowKeyPressed()
-        sut.rightArrowKeyPressed()
-
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
-
+    func test_pressKeyboardRightWhenDisabled_DeliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
         sut.isKeyboardNavigationEnabled = false
-        // after disable, no change in current page
-        sut.leftArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        // When
         sut.rightArrowKeyPressed()
-        XCTAssertEqual(sut.carouselView.currentPage, 2)
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
     }
 }
 

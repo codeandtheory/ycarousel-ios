@@ -40,7 +40,7 @@ public class CarouselViewController: UIViewController, CarouselViewDelegate, Car
         carouselView.dataSource = self
         carouselView.delegate = self
         self.view = carouselView
-        setKeys()
+        configureKeys()
     }
 
     // MARK: - CarouselViewDelegate
@@ -103,7 +103,7 @@ public class CarouselViewController: UIViewController, CarouselViewDelegate, Car
 // MARK: - UIKeyCommand
 
 internal extension CarouselViewController {
-    func setKeys() {
+    func configureKeys() {
         let rightArrow = UIKeyCommand(
             title: CarouselViewController.Strings.next.localized,
             action: #selector(rightArrowKeyPressed),
@@ -114,18 +114,17 @@ internal extension CarouselViewController {
             action: #selector(leftArrowKeyPressed),
             input: UIKeyCommand.inputLeftArrow
         )
-        
         addKeyCommand(leftArrow)
         addKeyCommand(rightArrow)
     }
 
     @objc func leftArrowKeyPressed() {
         guard isKeyboardNavigationEnabled else { return }
-        self.carouselView.loadView(at: carouselView.currentPage - 1)
+        carouselView.loadView(at: carouselView.currentPage - 1)
     }
 
     @objc func rightArrowKeyPressed() {
         guard isKeyboardNavigationEnabled else { return }
-        self.carouselView.loadView(at: carouselView.currentPage + 1)
+        carouselView.loadView(at: carouselView.currentPage + 1)
     }
 }
