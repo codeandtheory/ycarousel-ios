@@ -123,7 +123,7 @@ final class CarouselViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.carouselView.currentPage, 1)
     }
 
-    func test_pressKeyboardLeftWhenDisabled_DeliversNothing() {
+    func test_pressKeyboardLeftWhenDisabled_deliversNothing() {
         // Given
         let sut = makeSUT(withViews: [UIView(), UIView()])
         sut.carouselView.loadView(at: 1)
@@ -134,7 +134,7 @@ final class CarouselViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.carouselView.currentPage, 1)
     }
 
-    func test_pressKeyboardRightWhenDisabled_DeliversNothing() {
+    func test_pressKeyboardRightWhenDisabled_deliversNothing() {
         // Given
         let sut = makeSUT(withViews: [UIView(), UIView()])
         sut.isKeyboardNavigationEnabled = false
