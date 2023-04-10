@@ -82,6 +82,67 @@ final class CarouselViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.pageWillUnload)
         XCTAssertTrue(sut.pageWillUnload)
     }
+
+    func test_pressKeyboardLeft_deliversPreviousPage() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadPage(at: 1)
+        // When
+        sut.leftArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+    }
+
+    func test_pressKeyboardLeftOnFirstPage_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // When
+        sut.leftArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+    }
+
+    func test_pressKeyboardRight_deliversNextPage() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+        // When
+        sut.rightArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
+    }
+
+    func test_pressKeyboardRightFromLastPage_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadView(at: 1)
+        // When
+        sut.rightArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
+    }
+
+    func test_pressKeyboardLeftWhenDisabled_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.carouselView.loadView(at: 1)
+        sut.isKeyboardNavigationEnabled = false
+        // When
+        sut.leftArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 1)
+    }
+
+    func test_pressKeyboardRightWhenDisabled_deliversNothing() {
+        // Given
+        let sut = makeSUT(withViews: [UIView(), UIView()])
+        sut.isKeyboardNavigationEnabled = false
+        // When
+        sut.rightArrowKeyPressed()
+        // Then
+        XCTAssertEqual(sut.carouselView.currentPage, 0)
+    }
 }
 
 private extension CarouselViewControllerTests {

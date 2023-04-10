@@ -50,7 +50,7 @@ public class CarouselView: UIView {
             }
         }
     }
-    
+
     private let pageControlBottomSpacing: CGFloat = 16
     private var viewProvider: CarouselViewProvider?
 
@@ -117,6 +117,16 @@ public class CarouselView: UIView {
             return scrollView
         }
         return nil
+    }
+
+    /// Load view at index
+    /// - Parameter index: index of view to load
+    public func loadView(at index: Int) {
+        guard 0..<numberOfPages ~= index else {
+            return
+        }
+        currentPage = index
+        gotoPage(at: index)
     }
 }
 

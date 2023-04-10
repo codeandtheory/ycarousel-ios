@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "YCarousel",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v14)
     ],
@@ -16,7 +17,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/yml-org/YCoreUI.git",
-            from: "1.5.0"
+            from: "1.6.0"
         )
     ],
     targets: [
