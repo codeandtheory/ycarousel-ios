@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CarouselView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/CarouselView" class="dashAnchor"></a>
+
+    <a title="CarouselView Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          YCarousel Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">YCarousel Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      CarouselView Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CarouselView.html">CarouselView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CarouselViewController.html">CarouselViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CarouselViewDataSource.html">CarouselViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CarouselViewDelegate.html">CarouselViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>CarouselView</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CarouselView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CarouselView</span><span class="p">:</span> <span class="kt">UIScrollViewDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>A horizontally scrolling carousel view</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC8delegateAA0bC8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC8delegateAA0bC8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The object that acts as the delegate of the CarouselView.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CarouselViewDelegate.html">CarouselViewDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC10dataSourceAA0bc4DataE0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC10dataSourceAA0bc4DataE0_pSgvp">dataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The object that acts as the data source of the CarouselView.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CarouselViewDataSource.html">CarouselViewDataSource</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC11currentPageSivp"></a>
+                    <a name="//apple_ref/swift/Property/currentPage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC11currentPageSivp">currentPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current page number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">currentPage</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC17horizontalPadding14CoreFoundation7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/horizontalPadding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC17horizontalPadding14CoreFoundation7CGFloatVvp">horizontalPadding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Horizontal padding around the scroll view page within the carousel.</p>
+
+<p>This translates into whether adjacent pages are visible to either side of the current page.
+Defaults to <code>.zero</code> (no adjacent pages visible unless panning).
+Negative values lead to undefined behavior.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">horizontalPadding</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC11pageControlSo06UIPageE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/pageControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC11pageControlSo06UIPageE0Cvp">pageControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A control that displays a horizontal series of dots, each of which corresponds to a page.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">pageControl</span><span class="p">:</span> <span class="kt">UIPageControl</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC5frame17horizontalPaddingACSo6CGRectV_14CoreFoundation7CGFloatVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:horizontalPadding:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC5frame17horizontalPaddingACSo6CGRectV_14CoreFoundation7CGFloatVtcfc">init(frame:<wbr>horizontalPadding:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes an empty carousel view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span> <span class="nv">horizontalPadding</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the initial frame of the carousel (defaults to <code>.zero</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>horizontalPadding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the horizontal padding to use (defaults to <code>0</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC5frame5views17horizontalPaddingACSo6CGRectV_SaySo6UIViewCG14CoreFoundation7CGFloatVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:views:horizontalPadding:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC5frame5views17horizontalPaddingACSo6CGRectV_SaySo6UIViewCG14CoreFoundation7CGFloatVtcfc">init(frame:<wbr>views:<wbr>horizontalPadding:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a carousel view populated with the specified views</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">],</span> <span class="nv">horizontalPadding</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the initial frame of the carousel (defaults to <code>.zero</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>views</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the carousel pages to display</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>horizontalPadding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the horizontal padding to use (defaults to <code>0</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel12CarouselViewC04loadC02atySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/loadView(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel12CarouselViewC04loadC02atySi_tF">loadView(at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load view at index</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadView</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>index of view to load</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://yml.co" target="_blank" rel="external noopener">Y Media Labs</a>. All rights reserved. (Last updated: 2023-04-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

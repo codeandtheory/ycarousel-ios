@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CarouselViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/CarouselViewController" class="dashAnchor"></a>
+
+    <a title="CarouselViewController Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          YCarousel Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">YCarousel Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      CarouselViewController Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CarouselView.html">CarouselView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CarouselViewController.html">CarouselViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CarouselViewDataSource.html">CarouselViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CarouselViewDelegate.html">CarouselViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>CarouselViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CarouselViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/CarouselViewDelegate.html">CarouselViewDelegate</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/CarouselViewDataSource.html">CarouselViewDataSource</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A view controller that manages a carousel view</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC27isKeyboardNavigationEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isKeyboardNavigationEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC27isKeyboardNavigationEnabledSbvp">isKeyboardNavigationEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables keyboard navigation. Default is <code>true</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isKeyboardNavigationEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC0AA0bC0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/carouselView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC0AA0bC0CSgvp">carouselView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The carousel view managed by this controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">carouselView</span><span class="p">:</span> <span class="kt"><a href="../Classes/CarouselView.html">CarouselView</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC5viewsACSaySo6UIViewCG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(views:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC5viewsACSaySo6UIViewCG_tcfc">init(views:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a carousel view controller object with the specified views.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">views</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>views</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of views to be added as pages</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC15viewControllersACSaySo06UIViewD0CG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(viewControllers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC15viewControllersACSaySo06UIViewD0CG_tcfc">init(viewControllers:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a carousel view controller with the views of the view controllers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">viewControllers</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIViewController</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewControllers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of view controllers  whose views are to be added as pages</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CarouselViewDelegate"></a>
+                <a name="//apple_ref/swift/Section/CarouselViewDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CarouselViewDelegate"></a>
+                  <h3 class="section-name"><span>CarouselViewDelegate</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC0_12pageWillLoad2atyAA0bC0C_So6UIViewCSitF"></a>
+                    <a name="//apple_ref/swift/Method/carouselView(_:pageWillLoad:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC0_12pageWillLoad2atyAA0bC0C_So6UIViewCSitF">carouselView(_:<wbr>pageWillLoad:<wbr>at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will be called immediately before a page is loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">carouselView</span><span class="p">(</span><span class="n">_</span> <span class="nv">carouselView</span><span class="p">:</span> <span class="kt"><a href="../Classes/CarouselView.html">CarouselView</a></span><span class="p">,</span> <span class="n">pageWillLoad</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>carouselView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A view that displays horizontal pages.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The page that is about to be loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC0_11pageDidLoad2atyAA0bC0C_So6UIViewCSitF"></a>
+                    <a name="//apple_ref/swift/Method/carouselView(_:pageDidLoad:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC0_11pageDidLoad2atyAA0bC0C_So6UIViewCSitF">carouselView(_:<wbr>pageDidLoad:<wbr>at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will be called immediately after a page is loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">carouselView</span><span class="p">(</span><span class="n">_</span> <span class="nv">carouselView</span><span class="p">:</span> <span class="kt"><a href="../Classes/CarouselView.html">CarouselView</a></span><span class="p">,</span> <span class="n">pageDidLoad</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>carouselView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A view that displays horizontal pages.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The page that has been loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC0_14pageWillUnload2atyAA0bC0C_So6UIViewCSitF"></a>
+                    <a name="//apple_ref/swift/Method/carouselView(_:pageWillUnload:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC0_14pageWillUnload2atyAA0bC0C_So6UIViewCSitF">carouselView(_:<wbr>pageWillUnload:<wbr>at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will be called immediately before a page is unloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">carouselView</span><span class="p">(</span><span class="n">_</span> <span class="nv">carouselView</span><span class="p">:</span> <span class="kt"><a href="../Classes/CarouselView.html">CarouselView</a></span><span class="p">,</span> <span class="n">pageWillUnload</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>carouselView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A view that displays horizontal pages.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The page that is about to be unloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC0_13pageDidUnload2atyAA0bC0C_So6UIViewCSitF"></a>
+                    <a name="//apple_ref/swift/Method/carouselView(_:pageDidUnload:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC0_13pageDidUnload2atyAA0bC0C_So6UIViewCSitF">carouselView(_:<wbr>pageDidUnload:<wbr>at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will be called immediately after a page is unloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">carouselView</span><span class="p">(</span><span class="n">_</span> <span class="nv">carouselView</span><span class="p">:</span> <span class="kt"><a href="../Classes/CarouselView.html">CarouselView</a></span><span class="p">,</span> <span class="n">pageDidUnload</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>carouselView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A view that displays horizontal pages.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The page that has been unloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CarouselViewDataSource"></a>
+                <a name="//apple_ref/swift/Section/CarouselViewDataSource" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CarouselViewDataSource"></a>
+                  <h3 class="section-name"><span>CarouselViewDataSource</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC13numberOfPagesSivp"></a>
+                    <a name="//apple_ref/swift/Property/numberOfPages" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC13numberOfPagesSivp">numberOfPages</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates the number of pages to be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfPages</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9YCarousel22CarouselViewControllerC08carouselC06pageAtSo6UIViewCSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/carouselView(pageAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9YCarousel22CarouselViewControllerC08carouselC06pageAtSo6UIViewCSi_tF">carouselView(pageAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the pages to be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">carouselView</span><span class="p">(</span><span class="n">pageAt</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Indicates the index of a page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>UIView</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://yml.co" target="_blank" rel="external noopener">Y Media Labs</a>. All rights reserved. (Last updated: 2023-04-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
